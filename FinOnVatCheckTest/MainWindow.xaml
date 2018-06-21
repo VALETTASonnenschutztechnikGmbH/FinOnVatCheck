@@ -1,0 +1,36 @@
+﻿<Window x:Name="FinOnVatCheck" x:Class="FinOnVatCheckTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinOnVatCheckTest"
+        mc:Ignorable="d"
+        Title="FinOn Vat Check" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="Memberid" HorizontalAlignment="Left" Height="23" Margin="146,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="MemberidLabel" Content="Teilnehmer ID" HorizontalAlignment="Left" Margin="18,15,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="UserId" HorizontalAlignment="Left" Height="23" Margin="146,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="UserIdLabel" Content="Benutzer ID" HorizontalAlignment="Left" Margin="18,52,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="Pin" HorizontalAlignment="Left" Height="23" Margin="146,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="UserIdLabel_Copy" Content="Pin" HorizontalAlignment="Left" Margin="18,83,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="ProducerVatNum" HorizontalAlignment="Left" Height="23" Margin="146,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="UserIdLabel_Copy1" Content="UID Hersteller" HorizontalAlignment="Left" Margin="18,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.428,2.127" />
+        <Button x:Name="btnValidate" Content="Validate" HorizontalAlignment="Left" Margin="327,24,0,0" VerticalAlignment="Top" Width="75" Click="btnValidate_Click" />
+        <GroupBox x:Name="GroupVatNumCheck" Header="UID Prüfung" HorizontalAlignment="Left" Height="100" Margin="25,185,0,0" VerticalAlignment="Top" Width="405">
+            <TextBox x:Name="VatNum" HorizontalAlignment="Left" Height="23" Margin="124,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        </GroupBox>
+        <ComboBox x:Name="comboBoxCountries" HorizontalAlignment="Left" Margin="119,203,0,0" VerticalAlignment="Top" Width="209" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Austria" Tag="AT" />
+            <ComboBoxItem Content="Germany" Tag="DE" />
+        </ComboBox>
+        <Label x:Name="VatNumLabel" Content="VAT Num" HorizontalAlignment="Left" Margin="36,242,0,0" VerticalAlignment="Top" />
+        <Label x:Name="labelCountryCode" Content="" HorizontalAlignment="Left" Margin="108,242,0,0" VerticalAlignment="Top" Width="35" />
+        <Image HorizontalAlignment="Left" Height="23" Margin="327,66,0,0" VerticalAlignment="Top" Width="24" Source="Images/smallfail.gif" Visibility="Hidden" />
+        <Image HorizontalAlignment="Left" Height="23" Margin="394,66,0,0" VerticalAlignment="Top" Width="27" Source="Images/smallsuccess.gif" Visibility="Hidden" />
+        <Label x:Name="labelAddress" Content="" HorizontalAlignment="Left" Margin="282,89,0,0" VerticalAlignment="Top" Height="96" Width="218" />
+        <Label x:Name="labelCompanyName" Content="" HorizontalAlignment="Left" Margin="282,52,0,0" VerticalAlignment="Top" Width="218" />
+        <Image x:Name="imageInvalid" HorizontalAlignment="Left" Height="23" Margin="415,24,0,0" VerticalAlignment="Top" Width="28" Source="Images/smallfail.gif" />
+        <Image x:Name="imageValid" HorizontalAlignment="Left" Height="23" Margin="448,24,0,0" VerticalAlignment="Top" Width="24" Source="Images/smallsuccess.gif" />
+        <Label x:Name="labelService" Content="" HorizontalAlignment="Left" Margin="25,290,0,0" VerticalAlignment="Top" Width="405" />
+    </Grid>
+</Window>
